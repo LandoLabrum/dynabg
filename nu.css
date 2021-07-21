@@ -1,0 +1,232 @@
+@font-face {
+   src: url(fonts/3cd786652b8a2e9d41f210cb1a527ff6.ttf);
+   font-family: Montserrat
+}
+
+@font-face {
+   src: url(fonts/21ac684843963cfc534ecb65f67587e4.otf);
+   src: url(fonts/cb0d88513ddd421d480f1cf96ed749e6.otf);
+   font-family: Steps
+}
+
+body, html {
+   margin: 0;
+   padding: 0;
+   font-family: Roboto, sans-serif;
+   color: #d3d3d3;
+   background: #141414;
+   z-index: -50;
+   overflow: hidden;
+   user-select: none;
+   position: absolute;
+   width: 100vw;
+   height: 100vh
+}
+
+#filterToggle {
+   display: none
+}
+
+@supports ((backdrop-filter:invert(1))) {
+   #filterToggle {
+      display: inline
+   }
+}
+
+#popup {
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   z-index: 12;
+   background: rgba(0, 0, 0, .9);
+   display: none
+}
+
+#popupInner {
+   margin: auto;
+   max-width: 500px;
+   padding: 20px
+}
+
+#popup:hover {
+   cursor: not-allowed
+}
+
+#continueButton {
+   cursor: pointer;
+   background: 0 0;
+   float: right
+}
+
+button {
+   cursor: none
+}
+
+button:focus {
+   outline: 0
+}
+
+h1, h2, h3, h4 {
+   color: #fff;
+   margin: 0
+}
+
+h1, h2 {
+   font-family: Steps!important
+}
+
+h2 {
+   font-weight: 400
+}
+
+#title {
+   color: #fff
+}
+
+p {
+   font-size: 1.3em;
+   line-height: 1.5;
+   margin: 20px 0 20px 0
+}
+
+.flexRow {
+   display: flex;
+   flex-direction: row
+}
+
+.contentElem {
+   margin: 0 50px
+}
+
+.hoverable {
+   height: fit-content;
+   height: -moz-fit-content;
+   width: fit-content;
+   width: -moz-fit-content;
+   text-decoration: none;
+   display: block
+}
+
+::selection {
+   color: #000;
+   background: #fff
+}
+
+.leftPanelElem {
+   margin: 50px
+}
+
+#content {
+   overflow: auto;
+   height: 50vh;
+   height: -webkit-fill-available;
+   margin: 20px 0 20px 0;
+   padding: 0 20px 0 0;
+   border-right: solid;
+   border-color: #fff;
+   display: grid;
+   align-items: center
+}
+
+a {
+   color: #fff;
+   cursor: none
+}
+
+b {
+   color: #fff
+}
+
+.hiddenContent {
+   display: none
+}
+
+.overlay {
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   pointer-events: none;
+   z-index: 10
+}
+
+#filter {
+   backdrop-filter: invert(0);
+   mix-blend-mode: multiply;
+   background: #fff
+}
+
+#filterToggle {
+   margin: 0
+}
+
+#themeMenuDiv {
+   z-index: 11;
+   padding: 0;
+   text-align: center
+}
+
+html {
+   --scrollbarBG: rgba(0, 0, 0, 0);
+   --thumbBG: #fff
+}
+
+body {
+   scrollbar-color: var(--thumbBG) var(--scrollbarBG)
+}
+
+::-webkit-scrollbar {
+   width: inherit
+}
+
+::-webkit-scrollbar-button {
+   width: 0;
+   height: 0
+}
+
+::-webkit-scrollbar-thumb {
+   background: var(--thumbBG)
+}
+
+::-webkit-scrollbar-thumb:active {
+   background: #fff
+}
+
+@media only screen and (max-width:768px) {
+   .leftPanelElem {
+      margin: 30px
+   }
+   #bodyParent {
+      display: block
+   }
+   #content {
+      border: none;
+      align-items: normal
+   }
+   .contentElem {
+      margin: 30px
+   }
+   #themeMenuDiv {
+      position: absolute;
+      top: 0;
+      right: 0;
+      line-height: normal
+   }
+}
+
+@media only screen and (max-width:576px) {
+   .leftPanelElem {
+      margin: 30px
+   }
+   #content {
+      font-size: .8em;
+      align-items: normal;
+      margin: 10px 0 0 0
+   }
+   .contentElem {
+      margin: 0
+   }
+}
